@@ -15,6 +15,17 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    void _showSettingsPanel() {
+      showModalBottomSheet(
+          context: context,
+          builder: (context) {
+            return Container(
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+              child: Text('bottom sheet'),
+            );
+          });
+    }
+
     return StreamProvider<List<Orders>>.value(
       value: DatabaseService().orders,
       child: Scaffold(
@@ -30,7 +41,14 @@ class _HomeState extends State<Home> {
                 await _auth.signOut();
               },
               label: Text('Sign out'),
-            )
+            ),
+            FlatButton.icon(
+              icon: Icon(
+                Icons.add_circle,
+              ),
+              label: Text('Create a new order'),
+              onPressed: () => _showSettingsPanel(),
+            ),
           ],
         ),
         body: Container(child: OrderList()),

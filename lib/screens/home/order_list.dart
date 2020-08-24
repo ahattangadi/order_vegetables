@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
+import 'package:order_vegetables/models/orders.dart';
+import 'order_tile.dart';
 
 class OrderList extends StatefulWidget {
   @override
@@ -10,16 +12,13 @@ class OrderList extends StatefulWidget {
 class _OrderListState extends State<OrderList> {
   @override
   Widget build(BuildContext context) {
-    final orders = Provider.of<QuerySnapshot>(context);
-    //print(brews.documents);
-    if (orders != null) {
-      for (var doc in orders.documents) {
-        print(doc.data);
-      }
-    }
+    final orders = Provider.of<List<Orders>>(context);
 
-    Widget build(BuildContext context) {
-      return Container();
-    }
+    return ListView.builder(
+      itemCount: orders.length,
+      itemBuilder: (context, index) {
+        return OrderTile(order: orders[index]);
+      },
+    );
   }
 }
