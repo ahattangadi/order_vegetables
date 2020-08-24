@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "241073875718",
+    "firebase_url": "https://order-vegetables-33ddf.firebaseio.com",
+    "project_id": "order-vegetables-33ddf",
+    "storage_bucket": "order-vegetables-33ddf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241073875718:android:70fe1b8050a52d15ec8c87",
+        "android_client_info": {
+          "package_name": "com.thecoderman.order_vegetables"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241073875718-i60sum10juppc76h1aleslj7upaor5p2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDVOdRP5_WUArB9gxEVG77xCLc5n_8xE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241073875718-i60sum10juppc76h1aleslj7upaor5p2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
