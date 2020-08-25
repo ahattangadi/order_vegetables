@@ -86,6 +86,9 @@ class _SignInState extends State<SignIn> {
                                     'Sign in',
                                     style: TextStyle(color: Colors.white),
                                   ),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
                                   onPressed: () async {
                                     if (_formKey.currentState.validate()) {
                                       setState(() => loading = true);

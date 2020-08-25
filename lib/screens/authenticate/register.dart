@@ -89,6 +89,9 @@ class _RegisterState extends State<Register> {
                                     'Sign up',
                                     style: TextStyle(color: Colors.white),
                                   ),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(20.0)),
                                   onPressed: () async {
                                     if (_formKey.currentState.validate()) {
                                       setState(() => loading = true);
