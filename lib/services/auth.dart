@@ -50,7 +50,7 @@ class AuthService {
       FirebaseUser user = result.user;
 //create a new fs document for user w/ uid
       await DatabaseService(uid: user.uid)
-          .updateUserData(email, '000', 'undefined');
+          .updateUserData(email, 'Your Order', 'Undefined Address');
       return _userFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());
