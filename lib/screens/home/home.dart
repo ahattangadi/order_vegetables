@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_vegetables/screens/home/settings_form.dart';
 import 'package:order_vegetables/services/auth.dart';
 import 'package:order_vegetables/services/database.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +22,7 @@ class _HomeState extends State<Home> {
           builder: (context) {
             return Container(
               padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
-              child: Text('bottom sheet'),
+              child: SettingsForm(),
             );
           });
     }
