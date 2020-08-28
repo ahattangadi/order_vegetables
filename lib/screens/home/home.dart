@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_vegetables/screens/home/payment_screen.dart';
 import 'package:order_vegetables/screens/home/settings_form.dart';
 import 'package:order_vegetables/services/auth.dart';
 import 'package:order_vegetables/services/database.dart';
@@ -54,6 +55,14 @@ class _HomeState extends State<Home> {
               label: Text('Create a new order'),
               onPressed: () => _showSettingsPanel(),
             ),
+            FlatButton.icon(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return PaymentScreen();
+                  }));
+                },
+                icon: Icon(Icons.account_balance_wallet),
+                label: Text('Pay'))
           ],
         ),
         body: Container(child: OrderList()),
