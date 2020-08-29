@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_vegetables/screens/home/payment_success.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:toast/toast.dart';
 
@@ -33,8 +34,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
       "name": "Order Vegetables",
       "description": "Payment for order; ordered from Order Vegetables",
       "prefill": {
-        "contact": "1122334450",
-        "email": "aarav@hattangadi.com",
+        "contact": "",
+        "email": "",
       },
       "external": {
         "wallets": ["paytm"]
