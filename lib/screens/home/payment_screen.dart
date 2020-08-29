@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:order_vegetables/screens/home/payment_success.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
-import 'package:toast/toast.dart';
 
 class PaymentScreen extends StatefulWidget {
   @override
@@ -51,17 +51,32 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
   void handlerPaymentSuccess() {
     print("Payment Success");
-    Toast.show('Payment Successful', context);
+    Fluttertoast.showToast(
+      msg: 'Payment to Order Vegetables Successful',
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 10,
+    );
   }
 
   void handlerErrorFailure() {
     print("Payment Error");
-    Toast.show('Error in Payment', context);
+    Fluttertoast.showToast(
+      msg: 'ERR IN PAYMENT',
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 10,
+    );
   }
 
   void handlerExternalWallet() {
     print("Payment — External Wallet");
-    Toast.show('Payment — External Wallet', context);
+    Fluttertoast.showToast(
+      msg: 'Payment to Order Vegetables — External Wallet',
+      toastLength: Toast.LENGTH_LONG,
+      gravity: ToastGravity.CENTER,
+      timeInSecForIosWeb: 10,
+    );
   }
 
   @override
