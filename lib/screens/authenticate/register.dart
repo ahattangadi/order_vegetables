@@ -87,7 +87,9 @@ class _RegisterState extends State<Register> {
                                   color: Colors.pink[400],
                                   child: Text(
                                     'Sign up',
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'SFPro'),
                                   ),
                                   shape: RoundedRectangleBorder(
                                       borderRadius:

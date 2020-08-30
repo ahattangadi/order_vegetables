@@ -15,6 +15,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final AuthService _auth = AuthService();
 
+  int _currentIndex = 0;
+  final tabs = [
+    Container(child: OrderList()),
+    PaymentScreen(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     void _showSettingsPanel() {
@@ -48,24 +54,35 @@ class _HomeState extends State<Home> {
               },
               label: Text('Sign out'),
             ),
-            FlatButton.icon(
-              icon: Icon(
-                Icons.add_circle,
-              ),
-              label: Text('Create a new order'),
-              onPressed: () => _showSettingsPanel(),
-            ),
-            FlatButton.icon(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return PaymentScreen();
-                  }));
-                },
-                icon: Icon(Icons.account_balance_wallet),
-                label: Text('Pay'))
           ],
         ),
-        body: Container(child: OrderList()),
+        body: tabs[_currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _currentIndex,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
+              backgroundColor: Colors.white,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_balance_wallet),
+              title: Text('Pay Now!'),
+              backgroundColor: Colors.blue,
+            ),
+          ],
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => _showSettingsPanel(),
+          child: Icon(Icons.create),
+          backgroundColor: Colors.brown[400],
+        ),
       ),
     );
   }

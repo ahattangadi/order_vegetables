@@ -5,3 +5,5 @@ Format = Version Number -- Changes <br>
 1.0.1 -- Bug fixes, Changed sign up and sign in buttons from *Square Buttons* to **_Rounded Buttons_** <br>
 1.1.0 -- Changed App Icon to icon adhereing to Material Design Guidelines and Human Interface Guidelines <br>
 1.2.0 -- Bug fixes, Added payment option <br>
+1.2.1 -- Added Splash Screen <br>
+1.3.1 -- Removed buttons from App Bar and added Bottom Nav + FAB

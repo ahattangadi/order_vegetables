@@ -32,7 +32,9 @@ class _SignInState extends State<SignIn> {
                   backgroundColor: Colors.brown[400],
                   elevation: 0.0,
                   centerTitle: true,
-                  title: Text('Sign in to Order Vegetables'),
+                  title: Text(
+                    'Sign in to Order Vegetables',
+                  ),
                   actions: <Widget>[
                     FlatButton.icon(
                         onPressed: () {
@@ -84,7 +86,9 @@ class _SignInState extends State<SignIn> {
                                   color: Colors.pink[400],
                                   child: Text(
                                     'Sign in',
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'SFPro'),
                                   ),
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
