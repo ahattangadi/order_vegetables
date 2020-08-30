@@ -7,3 +7,4 @@ Format = Version Number -- Changes <br>
 1.2.0 -- Bug fixes, Added payment option <br>
 1.2.1 -- Added Splash Screen <br>
 1.3.1 -- Removed buttons from App Bar and added Bottom Nav + FAB
+1.4.0 -- Added Contact Us Page

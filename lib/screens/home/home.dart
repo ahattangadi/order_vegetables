@@ -6,6 +6,7 @@ import 'package:order_vegetables/services/database.dart';
 import 'package:provider/provider.dart';
 import 'package:order_vegetables/screens/home/order_list.dart';
 import 'package:order_vegetables/models/orders.dart';
+import 'package:order_vegetables/screens/home/contact.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -19,6 +20,7 @@ class _HomeState extends State<Home> {
   final tabs = [
     Container(child: OrderList()),
     PaymentScreen(),
+    ContactScreen(),
   ];
 
   @override
@@ -70,6 +72,11 @@ class _HomeState extends State<Home> {
               icon: Icon(Icons.account_balance_wallet),
               title: Text('Pay Now!'),
               backgroundColor: Colors.blue,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.contact_mail),
+              title: Text('Contact Us'),
+              backgroundColor: Colors.white,
             ),
           ],
           onTap: (index) {
