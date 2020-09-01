@@ -12,22 +12,24 @@ void main(List<String> args) {
 class ContactScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Contact Us'),
-        backgroundColor: Colors.brown[400],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Image.asset('assets/images/Logo.png'),
-            SizedBox(
-              height: 40.0,
-            ),
-            Text(
-                'Contact Us: \n Address: ${_address} \n Phone Number: ${_phoneNumber} \n Email Address: ${_emailAddress} '),
-          ],
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Contact Us'),
+          backgroundColor: Colors.brown[400],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Image.asset('assets/images/Logo.png'),
+              SizedBox(
+                height: 40.0,
+              ),
+              Text(
+                  'Contact Us: \n Address: ${_address} \n Phone Number: ${_phoneNumber} \n Email Address: ${_emailAddress} '),
+            ],
+          ),
         ),
       ),
     );
