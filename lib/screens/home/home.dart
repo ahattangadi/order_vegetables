@@ -90,6 +90,41 @@ class _HomeState extends State<Home> {
           child: Icon(Icons.create),
           backgroundColor: Colors.brown[400],
         ),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              DrawerHeader(child: Image.asset('assets/images/Logo.png')),
+              ListTile(
+                  title: Text('Home'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Home()),
+                    );
+                  }),
+              ListTile(
+                  title: Text('Pay Now'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PaymentScreen()),
+                    );
+                  }),
+              ListTile(
+                  title: Text('Contact Us'),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ContactScreen()),
+                    );
+                  }),
+              ListTile(
+                title: Text(
+                    '(C) 2020, Order Vegetables \n All Rights Reserved \n Open  Source Code \n Written in Flutter by Aarav'),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

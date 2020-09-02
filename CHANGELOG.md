@@ -6,5 +6,6 @@ Format = Version Number -- Changes <br>
 1.1.0 -- Changed App Icon to icon adhereing to Material Design Guidelines and Human Interface Guidelines <br>
 1.2.0 -- Bug fixes, Added payment option <br>
 1.2.1 -- Added Splash Screen <br>
-1.3.1 -- Removed buttons from App Bar and added Bottom Nav + FAB
-1.4.0 -- Added Contact Us Page
+1.3.1 -- Removed buttons from App Bar and added Bottom Nav + FAB <br>
+1.4.0 -- Added Contact Us Page <br>
+1.5.0 -- Added navigation drawer / nav. hamburger menu
