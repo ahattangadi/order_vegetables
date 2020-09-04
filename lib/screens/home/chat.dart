@@ -7,6 +7,9 @@ class ChatScreen extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () => Navigator.pop(context)),
           title: Text('Get Help'),
         ),
         body: Padding(

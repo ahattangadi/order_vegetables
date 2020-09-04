@@ -10,3 +10,4 @@ Format = Version Number -- Changes <br>
 1.4.0 -- Added Contact Us Page <br>
 1.5.0 -- Added navigation drawer / nav. hamburger menu <br>
 1.5.1 -- Added Complaint Form <br>
+1.6.0 -- Added Forms <br>

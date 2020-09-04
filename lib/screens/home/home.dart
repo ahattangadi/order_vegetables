@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:order_vegetables/screens/home/chat.dart';
+import 'package:order_vegetables/screens/home/complaint.dart';
 import 'package:order_vegetables/screens/home/payment_screen.dart';
+import 'package:order_vegetables/screens/home/rating.dart';
 import 'package:order_vegetables/screens/home/settings_form.dart';
 import 'package:order_vegetables/services/auth.dart';
 import 'package:order_vegetables/services/database.dart';
@@ -49,7 +51,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
           title: Text('Order Vegetables'),
-          backgroundColor: Colors.brown[400],
+          backgroundColor: Colors.teal[500],
           elevation: 0.0,
           actions: <Widget>[
             FlatButton.icon(
@@ -57,11 +59,17 @@ class _HomeState extends State<Home> {
               onPressed: () async {
                 await _auth.signOut();
               },
-              label: Text('Sign out'),
+              label: Text(
+                'Sign out',
+                style: TextStyle(color: Colors.black),
+              ),
             ),
           ],
         ),
-        body: tabs[_currentIndex],
+        body: Scaffold(
+          body: tabs[_currentIndex],
+          backgroundColor: Colors.tealAccent[50],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: _currentIndex,
@@ -69,17 +77,17 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text('Home'),
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.tealAccent,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.account_balance_wallet),
               title: Text('Pay Now!'),
-              backgroundColor: Colors.blue,
+              backgroundColor: Colors.tealAccent,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.contact_mail),
               title: Text('Contact Us'),
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.tealAccent,
             ),
           ],
           onTap: (index) {
@@ -90,8 +98,8 @@ class _HomeState extends State<Home> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => _showSettingsPanel(),
-          child: Icon(Icons.create),
-          backgroundColor: Colors.brown[400],
+          child: Icon(Icons.add_shopping_cart),
+          backgroundColor: Colors.tealAccent[300],
         ),
         drawer: Drawer(
           child: ListView(
@@ -124,13 +132,17 @@ class _HomeState extends State<Home> {
               ListTile(
                   title: Text('File a complaint'),
                   onTap: () async {
-                    const url = "https://form.jotform.com/202471852266052";
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ComplaintScreen()));
+                    /*const url = "https://form.jotform.com/202471852266052";
                     if (await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Could not launch $url';
                     }
-                    /* WebView(
+                     WebView(
                       initialUrl: 'https://form.jotform.com/202471852266052',
                       javascriptMode: JavascriptMode.unrestricted,
                     ); */
@@ -141,6 +153,15 @@ class _HomeState extends State<Home> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => ChatScreen()),
+                  );
+                },
+              ),
+              ListTile(
+                title: Text('Rate Us!'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RatingScreen()),
                   );
                 },
               ),

@@ -14,7 +14,9 @@ class OrderTile extends StatelessWidget {
         child: ListTile(
           leading: CircleAvatar(
             radius: 25.0,
-            backgroundColor: Colors.brown,
+            backgroundColor: Colors.blue,
+            backgroundImage: NetworkImage(
+                'https://image.flaticon.com/icons/png/512/126/126486.png'),
           ),
           title: Text(order.name),
           subtitle: Text('Your Order: ${order.order}'),
