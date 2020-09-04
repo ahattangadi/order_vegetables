@@ -36,7 +36,9 @@ dependencies:
   razorpay_flutter: ^1.2.2
   toast: ^0.1.5
   fluttertoast: ^7.0.3
-  animated_splash_screen: ^1.0.0+1  
+  animated_splash_screen: ^1.0.0+1
+  webview_flutter: ^0.3.22+1
+  url_launcher: ^5.4.2
 
 
 

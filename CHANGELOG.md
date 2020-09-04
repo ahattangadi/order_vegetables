@@ -8,4 +8,5 @@ Format = Version Number -- Changes <br>
 1.2.1 -- Added Splash Screen <br>
 1.3.1 -- Removed buttons from App Bar and added Bottom Nav + FAB <br>
 1.4.0 -- Added Contact Us Page <br>
-1.5.0 -- Added navigation drawer / nav. hamburger menu
+1.5.0 -- Added navigation drawer / nav. hamburger menu <br>
+1.5.1 -- Added Complaint Form <br>
