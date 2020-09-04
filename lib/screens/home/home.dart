@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_vegetables/screens/home/chat.dart';
 import 'package:order_vegetables/screens/home/payment_screen.dart';
 import 'package:order_vegetables/screens/home/settings_form.dart';
 import 'package:order_vegetables/services/auth.dart';
@@ -134,6 +135,15 @@ class _HomeState extends State<Home> {
                       javascriptMode: JavascriptMode.unrestricted,
                     ); */
                   }),
+              ListTile(
+                title: Text('Help'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ChatScreen()),
+                  );
+                },
+              ),
               ListTile(
                 title: Text(
                     '(C) 2020, Order Vegetables \n All Rights Reserved \n Open  Source Code \n Written in Flutter by Aarav'),
