@@ -23,6 +23,16 @@ class _RegisterState extends State<Register> {
   String password = '';
   String error = '';
 
+  //show-hide password
+  bool _obscureText = true;
+
+  //toggle password show
+  void _togglePass() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -44,7 +54,7 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.fromLTRB(295.0, 110.0, 0.0, 0.0),
+                      padding: EdgeInsets.fromLTRB(300.0, 110.0, 0.0, 0.0),
                       child: Text(
                         '.',
                         style: TextStyle(
@@ -68,6 +78,16 @@ class _RegisterState extends State<Register> {
                         ),
                         TextFormField(
                             decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                              disabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
                               hintText: 'Email',
                             ),
                             validator: (val) => val.isEmpty
@@ -81,7 +101,22 @@ class _RegisterState extends State<Register> {
                         ),
                         TextFormField(
                             decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                              disabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
                               hintText: 'Password',
+                              suffixIcon: IconButton(
+                                  icon: Icon(_obscureText
+                                      ? Icons.visibility
+                                      : Icons.visibility_off),
+                                  onPressed: _togglePass),
                             ),
                             validator: (val) => val.length < 6
                                 ? 'Enter a password with more than 6 characters.'

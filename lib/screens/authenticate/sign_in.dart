@@ -21,6 +21,16 @@ class _SignInState extends State<SignIn> {
   String password = '';
   String error = '';
 
+  //show-hide password
+  bool _obscureText = true;
+
+  //toggle password show
+  void _togglePass() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return loading
@@ -52,7 +62,7 @@ class _SignInState extends State<SignIn> {
                                 fontWeight: FontWeight.bold)),
                       ),
                       Container(
-                        padding: EdgeInsets.fromLTRB(250.0, 190.0, 0.0, 0.0),
+                        padding: EdgeInsets.fromLTRB(260.0, 190.0, 0.0, 0.0),
                         child: Text('.',
                             style: TextStyle(
                                 fontSize: 80.0,
@@ -74,6 +84,16 @@ class _SignInState extends State<SignIn> {
                         ),
                         TextFormField(
                             decoration: InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                              disabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
                               labelText: 'Email',
                             ),
                             validator: (val) => val.isEmpty
@@ -86,11 +106,28 @@ class _SignInState extends State<SignIn> {
                           height: 20.0,
                         ),
                         TextFormField(
-                            decoration: InputDecoration(labelText: 'Password'),
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                  icon: Icon(_obscureText
+                                      ? Icons.visibility
+                                      : Icons.visibility_off),
+                                  onPressed: _togglePass),
+                              labelText: 'Password',
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                              disabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(90.0)),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                            ),
                             validator: (val) => val.length < 6
                                 ? 'Enter a password with more than 6 characters.'
                                 : null,
-                            obscureText: true,
+                            obscureText: _obscureText,
                             onChanged: (val) {
                               setState(() => password = val);
                             }),

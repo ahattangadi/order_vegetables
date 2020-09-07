@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:order_vegetables/screens/home/chat.dart';
 import 'package:order_vegetables/screens/home/complaint.dart';
-import 'package:order_vegetables/screens/home/payment_screen.dart';
+import 'package:order_vegetables/screens/home/payment_screen1.dart';
 import 'package:order_vegetables/screens/home/rating.dart';
 import 'package:order_vegetables/screens/home/settings_form.dart';
 import 'package:order_vegetables/services/auth.dart';
@@ -170,6 +170,12 @@ class _HomeState extends State<Home> {
                     context,
                     MaterialPageRoute(builder: (context) => RatingScreen()),
                   );
+                },
+              ),
+              ListTile(
+                title: Text('Sign Out'),
+                onTap: () async {
+                  await _auth.signOut();
                 },
               ),
               ListTile(
