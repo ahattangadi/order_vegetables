@@ -50,6 +50,7 @@ class _RegisterState extends State<Register> {
                         style: TextStyle(
                             fontSize: 80.0,
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'ProximaNovaBlack',
                             color: Colors.green),
                       ),
                     ),
@@ -100,7 +101,8 @@ class _RegisterState extends State<Register> {
                               child: Text(
                                 'Sign up',
                                 style: TextStyle(
-                                    color: Colors.white, fontFamily: 'SFPro'),
+                                    color: Colors.white,
+                                    fontFamily: 'ProximaNovaBlack'),
                               ),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(90.0)),
@@ -134,7 +136,10 @@ class _RegisterState extends State<Register> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Already have an account?'),
+                  Text(
+                    'Already have an account?',
+                    style: TextStyle(fontFamily: 'ProximaNovaEB'),
+                  ),
                   SizedBox(
                     width: 5.0,
                   ),
@@ -146,9 +151,10 @@ class _RegisterState extends State<Register> {
                     child: Text(
                       'Sign In',
                       style: TextStyle(
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline),
+                        color: Colors.green,
+                        fontFamily: 'ProximaNovaEB',
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
                   )
                 ],

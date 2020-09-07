@@ -39,19 +39,24 @@ class _SignInState extends State<SignIn> {
                         padding: EdgeInsets.fromLTRB(15, 110, 0, 0),
                         child: Text('Hello',
                             style: TextStyle(
-                                fontSize: 80.0, fontWeight: FontWeight.bold)),
+                                fontFamily: 'ProximaNovaBlack',
+                                fontSize: 80.0,
+                                fontWeight: FontWeight.bold)),
                       ),
                       Container(
                         padding: EdgeInsets.fromLTRB(15, 190, 0, 0),
                         child: Text('There',
                             style: TextStyle(
-                                fontSize: 80.0, fontWeight: FontWeight.bold)),
+                                fontSize: 80.0,
+                                fontFamily: 'ProximaNovaBlack',
+                                fontWeight: FontWeight.bold)),
                       ),
                       Container(
                         padding: EdgeInsets.fromLTRB(250.0, 190.0, 0.0, 0.0),
                         child: Text('.',
                             style: TextStyle(
                                 fontSize: 80.0,
+                                fontFamily: 'ProximaNovaBlack',
                                 fontWeight: FontWeight.bold,
                                 color: Colors.green)),
                       )
@@ -134,7 +139,10 @@ class _SignInState extends State<SignIn> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Don\'t have a account?'),
+                    Text(
+                      'Don\'t have a account?',
+                      style: TextStyle(fontFamily: 'ProximaNovaEB'),
+                    ),
                     SizedBox(
                       width: 5.0,
                     ),
@@ -148,9 +156,10 @@ class _SignInState extends State<SignIn> {
                       child: Text(
                         'Register',
                         style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.bold,
-                            decoration: TextDecoration.underline),
+                          color: Colors.green,
+                          decoration: TextDecoration.underline,
+                          fontFamily: 'ProximaNovaEB',
+                        ),
                       ),
                     )
                   ],

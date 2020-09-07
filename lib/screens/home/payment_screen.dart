@@ -94,26 +94,37 @@ class _PaymentScreenState extends State<PaymentScreen> {
             icon: Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context)),
         elevation: 0.0,
-        backgroundColor: Colors.brown[400],
+        backgroundColor: Colors.green,
         title: Text('Pay Now'),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.fromLTRB(20.0, 50.0, 20.0, 0.0),
         child: Column(
           children: <Widget>[
             TextField(
+              keyboardType: TextInputType.number,
               controller: textEditingController,
               decoration: InputDecoration(
                   hintText: "Payment amount (find on bill sent w/ order)"),
             ),
             SizedBox(
-              height: 12.0,
+              height: 40.0,
             ),
-            RaisedButton(
-                child: Text('Pay Now'),
-                onPressed: () {
-                  openCheckout();
-                })
+            SizedBox(
+                width: MediaQuery.of(context).size.width - 30,
+                height: 50,
+                child: RaisedButton(
+                  color: Colors.green,
+                  onPressed: () {
+                    openCheckout();
+                  },
+                  child: Text(
+                    'Pay Now',
+                    style: TextStyle(color: Colors.white, fontFamily: 'SFPro'),
+                  ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(90.0)),
+                ))
           ],
         ),
       ),

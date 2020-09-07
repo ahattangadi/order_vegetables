@@ -12,6 +12,7 @@ import 'package:order_vegetables/models/orders.dart';
 import 'package:order_vegetables/screens/home/contact.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'home1.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -23,7 +24,10 @@ class _HomeState extends State<Home> {
 
   int _currentIndex = 0;
   final tabs = [
-    Container(child: OrderList()),
+    /* Container(
+      child: OrderList(),
+    ),*/
+    Home1(),
     PaymentScreen(),
     ContactScreen(),
   ];
@@ -48,20 +52,23 @@ class _HomeState extends State<Home> {
     return StreamProvider<List<Orders>>.value(
       value: DatabaseService().orders,
       child: Scaffold(
-        backgroundColor: Colors.brown[50],
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text('Order Vegetables'),
-          backgroundColor: Colors.teal[500],
+          backgroundColor: Colors.green,
           elevation: 0.0,
           actions: <Widget>[
             FlatButton.icon(
-              icon: Icon(Icons.person),
+              icon: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
               onPressed: () async {
                 await _auth.signOut();
               },
               label: Text(
                 'Sign out',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
           ],
@@ -77,7 +84,7 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text('Home'),
-              backgroundColor: Colors.tealAccent,
+              backgroundColor: Colors.green,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.account_balance_wallet),
@@ -99,7 +106,7 @@ class _HomeState extends State<Home> {
         floatingActionButton: FloatingActionButton(
           onPressed: () => _showSettingsPanel(),
           child: Icon(Icons.add_shopping_cart),
-          backgroundColor: Colors.tealAccent[300],
+          backgroundColor: Colors.green,
         ),
         drawer: Drawer(
           child: ListView(

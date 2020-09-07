@@ -77,6 +77,23 @@ flutter:
   - family: SFPro
     fonts:
       - asset: fonts/SF-Pro-Text-Regular.otf
+  - family: ProximaNova
+    fonts:
+      - asset: fonts/ProximaNova-Regular.otf
+        
+      - asset: fonts/Proxima Nova Bold.otf
+
+  - family: ProximaNovaBold
+    fonts:        
+      - asset: fonts/Proxima Nova Bold.otf
+  - family: ProximaNovaEB
+    fonts:
+      - asset: fonts/Proxima Nova Extrabold.otf
+
+  - family: ProximaNovaBlack
+    fonts:
+      - asset: fonts/Proxima Nova Black.otf
+        
 
  
   # For details regarding fonts from package dependencies,
