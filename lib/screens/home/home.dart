@@ -164,24 +164,8 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text('Order Vegetables'),
           backgroundColor: Colors.green,
           elevation: 0.0,
-          actions: <Widget>[
-            FlatButton.icon(
-              icon: Icon(
-                Icons.person,
-                color: Colors.white,
-              ),
-              onPressed: () async {
-                await _auth.signOut();
-              },
-              label: Text(
-                'Sign out',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
         ),
         body: Scaffold(
           body: tabs[_currentIndex],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:order_vegetables/screens/home/payment_success.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:toast/toast.dart';
@@ -144,6 +145,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                         borderSide:
                                             BorderSide(color: Colors.grey),
                                       )),
+                                  inputFormatters: [
+                                    FilteringTextInputFormatter.allow(
+                                        RegExp("[0-9.]"))
+                                  ],
                                 ),
                               ),
                               SizedBox(
