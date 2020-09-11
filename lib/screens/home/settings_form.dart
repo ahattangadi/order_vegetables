@@ -73,7 +73,9 @@ class _SettingsFormState extends State<SettingsForm> {
                       height: 20.0,
                     ),
                     RaisedButton(
-                      color: Colors.pink[400],
+                      color: Colors.green,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(30.0)),
                       child: Text(
                         'Create',
                         style: TextStyle(color: Colors.white),

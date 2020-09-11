@@ -135,21 +135,22 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               Container(
                                 width: MediaQuery.of(context).size.width - 40,
                                 child: TextField(
-                                  keyboardType: TextInputType.number,
-                                  controller: textEditingController,
-                                  decoration: InputDecoration(
-                                      labelText: "Input amount to be paid",
-                                      enabledBorder: OutlineInputBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(90.0)),
-                                        borderSide:
-                                            BorderSide(color: Colors.grey),
-                                      )),
-                                  inputFormatters: [
-                                    FilteringTextInputFormatter.allow(
-                                        RegExp("[0-9.]"))
-                                  ],
-                                ),
+                                    keyboardType: TextInputType.number,
+                                    controller: textEditingController,
+                                    decoration: InputDecoration(
+                                        labelText: "Input amount to be paid",
+                                        enabledBorder: OutlineInputBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(90.0)),
+                                          borderSide:
+                                              BorderSide(color: Colors.grey),
+                                        )),
+                                    inputFormatters: [
+                                      FilteringTextInputFormatter.allow(
+                                          RegExp("[0-9.]")),
+                                      FilteringTextInputFormatter.deny(RegExp(
+                                          "[a-zA-z #%\%&'()*+,-./:;<=>?@[]^_`{|}~]\$€¥₤£¢₢₡₠৳฿¤₣₴₰₵₪₲₳₯₱₨﷼₫円₹]")),
+                                    ]),
                               ),
                               SizedBox(
                                 height: 40.0,
