@@ -3,6 +3,7 @@ import 'package:order_vegetables/screens/authenticate/register.dart';
 import 'package:order_vegetables/screens/home/home.dart';
 import 'package:order_vegetables/services/auth.dart';
 import 'package:order_vegetables/shared/loading.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SignIn extends StatefulWidget {
   final Function toggleView;
@@ -155,17 +156,16 @@ class _SignInState extends State<SignIn> {
                                   if (result == null) {
                                     setState(() {
                                       error =
-                                          'An error has occured while trying to log in. Either you have entered incorrect credentials or your account does not exist.';
+                                          'An error has occured while trying to log in. Either you have entered incorrect credentials or your account does not exist. Please make sure that you have not left spaces in your email / password.';
                                       loading = false;
                                     });
+
+                                    Fluttertoast.showToast(msg: error);
                                   }
                                 }
                               }),
                         ),
                         SizedBox(height: 12.0),
-                        Text(error,
-                            style:
-                                TextStyle(color: Colors.red, fontSize: 14.0)),
                         SizedBox(
                           height: 140.0,
                         ),

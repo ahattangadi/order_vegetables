@@ -228,6 +228,7 @@ class _HomeState extends State<Home> {
           child: Icon(Icons.add_shopping_cart),
           backgroundColor: Colors.green,
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
         drawer: Drawer(
           child: ListView(
             children: [

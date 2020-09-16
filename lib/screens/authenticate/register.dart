@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:order_vegetables/screens/authenticate/sign_in.dart';
 import 'package:order_vegetables/services/auth.dart';
 import 'package:order_vegetables/shared/loading.dart';
@@ -150,8 +151,9 @@ class _RegisterState extends State<Register> {
                                   if (result == null) {
                                     setState(() {
                                       error =
-                                          'An error has occured while trying to create your account. Please check that you have entered a vaild e-mail and strong password. If you have, please try again later';
+                                          'An error has occured while trying to create your account. Please check that you have entered a vaild e-mail and strong password. If you have, please try again later. Please ensure that spaces have not been left after or before your email / password.';
                                       loading = false;
+                                      Fluttertoast.showToast(msg: error);
                                     });
                                   }
                                 }
