@@ -149,7 +149,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                       FilteringTextInputFormatter.allow(
                                           RegExp("[0-9.]")),
                                       FilteringTextInputFormatter.deny(RegExp(
-                                          "[a-zA-z #%\%&'()*+,-./:;<=>?@[]^_`{|}~]\$€¥₤£¢₢₡₠৳฿¤₣₴₰₵₪₲₳₯₱₨﷼₫円₹]")),
+                                          "[a-zA-z #%&'()*+,-./:;<=>?@[]^_`{|}~]\$€¥₤£¢₢₡₠৳฿¤₣₴₰₵₪₲₳₯₱₨﷼₫円₹]")),
                                     ]),
                               ),
                               SizedBox(
