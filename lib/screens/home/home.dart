@@ -14,6 +14,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home1.dart';
 import 'package:toast/toast.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -171,7 +172,32 @@ class _HomeState extends State<Home> {
           body: tabs[_currentIndex],
           backgroundColor: Colors.tealAccent[50],
         ),
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar: BottomNavyBar(
+          selectedIndex: _currentIndex,
+          onItemSelected: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: <BottomNavyBarItem>[
+            BottomNavyBarItem(
+                icon: Icon(Icons.home),
+                title: Text('Home'),
+                activeColor: Colors.green,
+                inactiveColor: Colors.black),
+            BottomNavyBarItem(
+                icon: Icon(Icons.account_balance_wallet),
+                title: Text('Pay Now'),
+                activeColor: Colors.green,
+                inactiveColor: Colors.black),
+            BottomNavyBarItem(
+                icon: Icon(Icons.contact_mail),
+                title: Text('Contact Us'),
+                activeColor: Colors.green,
+                inactiveColor: Colors.black),
+          ],
+        ),
+        /* BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: _currentIndex,
           items: [
@@ -196,7 +222,7 @@ class _HomeState extends State<Home> {
               _currentIndex = index;
             });
           },
-        ),
+        ), */
         floatingActionButton: FloatingActionButton(
           onPressed: () => _showSettingsPanel(),
           child: Icon(Icons.add_shopping_cart),
