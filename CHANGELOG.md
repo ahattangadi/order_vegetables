@@ -12,3 +12,4 @@ Format = Version Number -- Changes <br>
 1.5.1 -- Added Complaint Form <br>
 1.6.0 -- Added Forms <br>
 1.8.0 (1.7+1.0) -- Redesign (In Progress) & Better Help Dialog <br>
+1.8.1 (1.7+1.1) -- Redesign (In Progress) & Changed Error Text to FlutterToast
