@@ -48,30 +48,11 @@ class _RegisterState extends State<Register> {
                   child: Stack(
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.width - 395,
-                            MediaQuery.of(context).size.height - 560,
-                            0.0,
-                            0.0),
+                        padding: EdgeInsets.fromLTRB(15, 110, 0.0, 0.0),
                         child: Text(
                           'Signup',
                           style: TextStyle(
                               fontSize: 80.0, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      Container(
-                        padding: EdgeInsets.fromLTRB(
-                            MediaQuery.of(context).size.width - 140,
-                            MediaQuery.of(context).size.height - 560,
-                            0.0,
-                            0.0),
-                        child: Text(
-                          '.',
-                          style: TextStyle(
-                              fontSize: 80.0,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'ProximaNovaBlack',
-                              color: Colors.green),
                         ),
                       ),
                     ],
