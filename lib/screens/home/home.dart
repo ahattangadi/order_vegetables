@@ -260,31 +260,36 @@ class _HomeState extends State<Home> {
               ListTile(
                   title: Text('File a complaint'),
                   onTap: () async {
-                    Navigator.push(
+                    /* Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => ComplaintScreen()));
-                    /*const url = "https://form.jotform.com/202471852266052";
+                            builder: (context) => ComplaintScreen())); */
+                    const url = "https://form.jotform.com/202471852266052";
                     if (await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Could not launch $url';
                     }
-                     WebView(
+                    WebView(
                       initialUrl: 'https://form.jotform.com/202471852266052',
                       javascriptMode: JavascriptMode.unrestricted,
-                    ); */
+                    );
                   }),
               ListTile(title: Text('Help'), onTap: () => _showHelpPanel()),
               ListTile(
-                title: Text('Rate Us!'),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RatingScreen()),
-                  );
-                },
-              ),
+                  title: Text('Rate Us!'),
+                  onTap: () async {
+                    const url = "https://form.jotform.com/202473692190052";
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                    WebView(
+                      initialUrl: 'https://form.jotform.com/202473692190052',
+                      javascriptMode: JavascriptMode.unrestricted,
+                    );
+                  }),
               ListTile(
                 title: Text('Sign Out'),
                 onTap: () async {
